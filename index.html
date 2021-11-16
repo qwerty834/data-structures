@@ -1,0 +1,37 @@
+<html>
+    <head><title>Data structures</title></head>
+    <body style="background-color: blue;">
+        <h1 style="size:30px; background-color: coral;">List of students</h1>
+        <form style="margin-bottom: 9px;">
+            <span>1</span>
+            <input type="text" placeholder="name of student" id="student1"><br>
+            <span>2</span>
+            <input type="text" placeholder="name of student" id="student2"><br>
+            <span>3</span>
+            <input type="text" placeholder="name of student" id="student3"><br>
+            <span>4</span>
+            <input type="text" placeholder="name of student" id="student4"><br>
+            <input type="submit" onclick="sumbit()" id="submit">
+        </form>
+        <div id="display" style="background-color: crimson; size: 30px;"></div>
+        <button onclick="sort()" id="sort">Sort</button>
+        <script>
+            var array=[];
+            function sumbit(){
+                var name1 =document.getElementById("student1").value;
+                var name2 =document.getElementById("student2").value;
+                var name3 =document.getElementById("student3").value;
+                var name4 =document.getElementById("student4").value;
+
+                array.push(name1);
+                array.push(name2);
+                array.push(name3);
+                array.push(name4);
+                
+                document.getElementById("display").innerHTML=array;
+                document.getElementById("sumbit").style.display="none";
+                document.getElementById("sumbit").style.display="inline-block";
+            }
+        </script>
+    </body>
+</html>
